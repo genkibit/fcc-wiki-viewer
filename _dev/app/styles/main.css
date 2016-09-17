@@ -1,0 +1,142 @@
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 18px;
+  box-shadow: inset 0px 0px 205px 83px rgba(0,0,0,0.75);
+}
+
+body {
+  padding-bottom: 108px;
+  padding-bottom: 6rem;
+  font-size: 18px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  background: #300;
+}
+
+.browsehappy {
+  margin: 3.6px 0;
+  margin: 0.2rem 0;
+  background: #ccc;
+  color: #000;
+  padding: 3.6px 0;
+  padding: 0.2rem 0;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #9cf;
+  text-decoration: underline;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  background-color: #f00;
+}
+
+.checkbox {
+  margin: auto;
+  font-size: 15.299px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+#query {
+  max-width: 270px;
+  max-width: 15rem;
+  margin: 54px auto 0 auto;
+  margin: 3rem auto 0 auto;
+}
+
+.indicator {
+  margin-top: 18px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+ul {
+  position: relative;
+  top: 45px;
+  top: 2.5rem;
+  margin: 0 0 18px 0;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+dl {
+  list-style: none;
+}
+
+dt {
+  font-weight: 500;
+}
+
+dd {
+  margin-top: 6.3px;
+  margin-top: 0.35rem;
+  font-family: "sans-serif";
+  font-size: 15.299px;
+  font-size: 0.85rem;
+}
+
+.divider {
+  height: 1px;
+  margin-top: 18px;
+  margin-top: 1rem;
+  background: #fff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #300, #fff, #300);
+  background: linear-gradient(to right, #300, #fff, #300);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 54px;
+  height: 3rem;
+  font-size: 15.299px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+footer div p {
+  display: inline-block;
+  margin: 0 27px;
+  margin: 0 1.5rem;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 45.625rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+   input {
+     margin-bottom: 1rem;
+   }
+
+   .checkbox {
+     display: none;
+   }
+
+   button {
+     width: 4.5rem;
+   }
+
+   #query {
+     text-align: center;
+   }
+}

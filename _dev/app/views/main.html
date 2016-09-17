@@ -1,0 +1,37 @@
+<div ng-controller="MainCtrl">
+  <div class='error' ng-if="main.error">
+    An error has occurred. Check your browser console for details.
+  </div>
+  <section id="query">
+    <h4 class="sr-only">Search Bar</h4>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="main.checkbox"> Show close matches
+      </label>
+    </div>
+    <form class="form-inline" id="wiki-form" ng-submit="main.reqWikis()">
+      <input class="form-control" type="text" autocomplete="off" ng-model="main.asyncSelected" placeholder="Query" uib-typeahead="item for item in main.reqMenuItems($viewValue)" typeahead-loading="loading" typeahead-no-results="noResults">
+      <button class="btn btn-default" id="submit" type="submit" form="wiki-form"><i class="glyphicon glyphicon-search"></i><span class="sr-only">Submit</span></button>
+      <button class="btn btn-default" id="explore" type="button" ng-click="main.reqRandom()"><i class="glyphicon glyphicon-education"></i><span class="sr-only">Explore</span></button>
+    </form>
+  </section>
+  <section id="results">
+    <h4 class="sr-only">Search Results</h4>
+      <div class="indicator" ng-if="main.checkbox">
+        <i ng-show="loading"  class="glyphicon glyphicon-refresh"></i>
+        <div ng-show="noResults">
+          <i class="glyphicon glyphicon-remove"></i> No results found
+        </div>
+      </div>
+      <div class="indicator" ng-if="!main.checkbox" ng-show="main.noResults"><i class="glyphicon glyphicon-remove"></i> No results found</div>
+      <ul ng-repeat="item in main.results">
+        <dl>
+          <a href="{{ item.link }}">
+            <dt>{{ item.title }}</dt>
+            <dd>{{ item.snippet }}</dd>
+          </a>
+          <div class="divider"></div>
+        </dl>
+      </ul>
+  </section>
+</div>
