@@ -48,5 +48,7 @@ Code provided under an **[MIT license](https://github.com/genkibit/fcc-wiki-view
 
 Changelog
 ---
-+  20160917 -- v1.0.0
++ 20160917 -- v1.0.0
   - Initial release.
++ 20170225 -- v1.1.0
+  - Added site favicon.
